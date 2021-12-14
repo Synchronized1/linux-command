@@ -32,11 +32,11 @@ nohup(选项)(参数)
 ```shell
 nohup command > myout.file 2>&1 &
 ```
-
 在上面的例子中，输出被重定向到myout.file文件中。
 
 该指令表示不做挂断操作，后台下载
 
+具体描述:2>&1 是将标准出错重定向到标准输出，这里的标准输出已经重定向到了myout.file文件，即将标准出错也输出到myout.file文件中。最后一个&,是让该命令在后台执行。
 ```shell
 nohup wget site.com/file.zip
 ```
